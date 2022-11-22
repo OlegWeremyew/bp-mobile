@@ -1,0 +1,24 @@
+.footer {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration-line: underline;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  .footer__link {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-decoration-line: underline;
+    color: $gray;
+    transition: all 0.2s linear;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
