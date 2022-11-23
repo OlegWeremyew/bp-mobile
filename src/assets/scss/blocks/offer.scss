@@ -1,15 +1,62 @@
-.offer {
+.offers {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
-  .offer__item {
-    padding: 20px 0;
+  .offer__item1,
+  .offer__item2 {
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 162px;
+    width: 131px;
+    opacity: 0.35;
+  }
+
+  .offer__item2 {
+    position: relative;
+
+    .offer__discount {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $red;
+      color: $white;
+      font-family: 'SFProDisplay';
+      font-size: 12px;
+    }
+  }
+
+  .active {
+    height: 185px;
+    width: 152px;
     opacity: 1;
-    width: 40%;
+
+    .offer__discount {
+      width: 34px;
+      height: 34px;
+      font-size: 13px;
+    }
+  }
+
+  .offer__item1 {
+    background: url('../images/combined-shape.png') no-repeat;
+    background-size: cover;
+  }
+
+  .offer__item2 {
+    background: url('../images/combined-shape-cut.png') no-repeat;
+    background-size: cover;
   }
 }

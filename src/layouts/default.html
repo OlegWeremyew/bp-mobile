@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	{{> head }}
 </head>
@@ -9,62 +9,69 @@
 
 	<main class="main">
 		<div class="container">
-			<h1 class="title"></h1>
 
-			<ul class="content">
-				<li class="content__item">
-					<div class="icon">
-						<img
-							class="icon__img"
-							src="../assets/images/unlimitedDocs.svg"
-							alt="Unlimited documents"
-						/>
-					</div>
-					<p class="content__text--1"></p>
-				</li>
-				<li class="content__item">
-					<div class="icon">
-						<img
-							class="icon__img"
-							src="../assets/images/export.svg"
-							alt="Export to clouds"
-						/>
-					</div>
-					<p class="content__text--2"></p>
-				</li>
-				<li class="content__item">
-					<div class="icon">
-						<img
-							class="icon__img"
-							src="../assets/images/noAds.svg"
-							alt="Text recording"
-						/>
-					</div>
-					<p class="content__text--3"></p>
-				</li>
-			</ul>
-
-			<section class="offer">
-				<div class="offer__item--1">
-					<h4 class="offer__title--1"></h4>
-					<div class="offer__price--1"></div>
-					<div>
-						<p class="offer__status--1"></p>
-					</div>
-					<p class="offer__ month--1">$9.99 month</p>
+			<section class="content">
+				<h1 class="title"></h1>
+				<div>
+					<ul class="content__intro">
+						<li class="content__item">
+							<div class="icon">
+								<img
+									class="icon__img"
+									src="../assets/images/unlimitedDocs.svg"
+									alt="Unlimited documents"
+								/>
+							</div>
+							<p class="content__text1"></p>
+						</li>
+						<li class="content__item">
+							<div class="icon">
+								<img
+									class="icon__img"
+									src="../assets/images/export.svg"
+									alt="Export to clouds"
+								/>
+							</div>
+							<p class="content__text2"></p>
+						</li>
+						<li class="content__item">
+							<div class="icon">
+								<img
+									class="icon__img"
+									src="../assets/images/noAds.svg"
+									alt="Text recording"
+								/>
+							</div>
+							<p class="content__text3"></p>
+						</li>
+					</ul>
 				</div>
-				<div class="offer__item--2">
-					<h4 class="offer__title--2"></h4>
-					<div class="offer__price--2"></div>
+			</section> <!--intro-->
+
+			<section class="offers">
+				<div class="offer__item1 active">
+					<h4 class="offer__title1"></h4>
+					<div class="offer__price1"></div>
 					<div>
-						<p class="offer__status--2"></p>
+						<p class="offer__status1"></p>
 					</div>
-					<p  class="offer__ month--2">$19.99 month</p>
+					<p class="offer__month1"></p>
+				</div>
+				<div class="offer__item2">
+					<div class="offer__discount">-83%</div>
+					<h4 class="offer__title2"></h4>
+					<div class="offer__price2"></div>
+					<div>
+						<p class="offer__status2"></p>
+					</div>
+					<p class="offer__month2"></p>
 				</div>
 			</section>
 
 			<section class="sending">
-				<button type="button" class="sending__btn"></button>
+				<a href="https://apple.com/" class="sending__link">
+					<button type="button" class="sending__btn"></button>
+				</a>
 				<p class="sending__text"></p>
 			</section>
 

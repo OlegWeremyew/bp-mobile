@@ -3,34 +3,38 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-bottom: 18px;
 
-  .sending__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 280px;
-    height: 54px;
-    border-radius: 30px;
-    color: $white;
-    border: none;
+  .sending__link{
+    text-decoration: none;
 
-    background: linear-gradient(
-      270deg,
-      $btnBackgroundFirst 0%,
-      $btnBackgroundSecond 100%
-    );
+    .sending__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 280px;
+      height: 54px;
+      border-radius: 30px;
+      color: $white;
+      border: none;
 
-    transition: opacity 0.2s linear;
+      background: linear-gradient(
+                      270deg,
+                      $btnBackgroundFirst 0%,
+                      $btnBackgroundSecond 100%
+      );
 
-    &:hover {
-      opacity: 0.9;
       transition: opacity 0.2s linear;
+
+      &:hover {
+        opacity: 0.9;
+        transition: opacity 0.2s linear;
+      }
     }
   }
 
-  &__text {
-    margin-top: 16px;
+  .sending__text {
+    margin-top: 14px;
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
