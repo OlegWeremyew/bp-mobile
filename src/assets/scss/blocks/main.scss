@@ -10,14 +10,12 @@
     .title {
       margin: 0 auto;
       height: 86px;
-      width: 285px;
-      word-break: break-all;
       font-size: 36px;
       line-height: 42px;
 
       color: $white;
 
-      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .content {

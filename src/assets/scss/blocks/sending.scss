@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 
   .sending__btn {
     display: flex;
@@ -30,7 +31,6 @@
 
   &__text {
     margin-top: 16px;
-    color: $gray;
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;

@@ -6,9 +6,10 @@
   text-decoration-line: underline;
   margin: 0 auto;
   padding: 0 2rem;
+  font-family: Roboto;
 
-  .footer__link {
-    font-family: "Roboto";
+  .footer__link--term,
+  .footer__link--privacy {
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
