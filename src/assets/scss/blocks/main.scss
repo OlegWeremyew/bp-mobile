@@ -23,15 +23,21 @@
       margin: 0 auto;
       font-size: 36px;
       line-height: 42px;
+      font-family: 'SF Pro Display', sans-serif;
 
       color: $white;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .title__size {
+      font-size: 28px;
     }
 
     .content {
       display: flex;
       flex-direction: column;
       align-items: center;
+      font-family: 'SF Pro Display', sans-serif;
 
       .content__intro {
         margin-top: 5vh;

@@ -1,5 +1,28 @@
 @import "vars";
 @import "vender/reset";
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('src/assets/fonts/SF-Pro-Display-Bold.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('src/assets/fonts/SF-Pro-Display-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('src/assets/fonts/SF-Pro-Display-Medium.ttf') format('ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
 html {
   font-size: 62.5%;
@@ -14,7 +37,7 @@ body {
   color: $white;
   line-height: 1.5;
   min-width: 375px;
-  max-width: 375px;
+  max-width: 450px;
   margin: 0 auto;
 }
 
