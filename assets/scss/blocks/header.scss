@@ -1,0 +1,45 @@
+.header {
+  height: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 42px 18px 0;
+
+  .header__link {
+    letter-spacing: -0.216667px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    line-height: 41px;
+    text-decoration: none;
+    transition: all 0.1s linear;
+    font-family: 'SF Pro Display', sans-serif;
+
+    &:hover{
+      text-decoration: underline;
+      transition: all 0.1s linear;
+    }
+
+    &--img {
+      padding: 4px;
+      border-radius: 50%;
+      background-color: transparent;
+      transition: background-color 0.2s linear;
+
+      .header__img {
+        object-fit: contain;
+      }
+
+      &:hover {
+        background-color: $lightGray;
+        transition: background-color 0.2s linear;
+      }
+    }
+
+    &:hover {
+      color: $white;
+      transition: color 0.2s linear;
+    }
+  }
+}
