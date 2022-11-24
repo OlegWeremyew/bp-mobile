@@ -101,24 +101,6 @@
     }
   }
 
-  .active {
-    height: 178px;
-    width: 152px;
-    opacity: 1;
-    transition: opacity 0.05s linear;
-
-    .offer__discount {
-      width: 34px;
-      height: 34px;
-      font-size: 13px;
-    }
-
-    &:hover {
-      transition: opacity 0.05s linear;
-      opacity: 0.8;
-    }
-  }
-
   .offer__item1 {
     background: url('../images/combined-shape.png') no-repeat;
     background-size: contain;
@@ -127,5 +109,25 @@
   .offer__item2 {
     background: url('../images/combined-shape-cut.png') no-repeat;
     background-size: contain;
+  }
+
+  .active {
+    height: 178px;
+    width: 152px;
+    opacity: 1;
+    transition: opacity 0.05s linear;
+
+    .offer__discount {
+      top: -0.25px;
+      right: 6px;
+      width: 33.5px;
+      height: 33.5px;
+      font-size: 13px;
+    }
+
+    &:hover {
+      transition: opacity 0.05s linear;
+      opacity: 0.8;
+    }
   }
 }

@@ -1,27 +1,22 @@
 @import "vars";
 @import "vender/reset";
+
 @font-face {
-  font-family: 'SFProDisplay';
-  src: url('src/assets/fonts/SF-Pro-Display-Bold.ttf') format('ttf');
+  font-family: 'Noto Serif Khojki';
+  src: local('Noto Serif Khojki'), url('src/assets/fonts/SF-Pro-Display-Bold.ttf') format('ttf');
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
   font-family: 'SFProDisplay';
   src: url('src/assets/fonts/SF-Pro-Display-Bold.ttf') format('ttf');
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
   font-family: 'SFProDisplay';
   src: url('src/assets/fonts/SF-Pro-Display-Medium.ttf') format('ttf');
   font-weight: 500;
-  font-style: normal;
-  font-display: swap;
 }
 
 html {

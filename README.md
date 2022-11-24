@@ -17,7 +17,7 @@ This landing banner was made using:
 1. Install all the dependencies. Use: "npm install".
 2. Use "gulp" to build the project.
 
-![landing banner](https://github.com/OlegWeremyew/bp-mobile/tree/master/src/assets/imagesmarkdown/landing-banner-bp-mobile.png)
+[![landing-banner-bp-mobile.png](https://i.postimg.cc/tg2t2h40/landing-banner-bp-mobile.png)](https://postimg.cc/XZBCvB5x)
 
 #### Working principle:
 

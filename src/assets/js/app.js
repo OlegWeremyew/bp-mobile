@@ -1,15 +1,21 @@
 const languages = require('../localizations/index');
 const {es, fr, ja, nl, ru, zh, en} = languages;
 
+//a function that determines the language of the user's page
 const getUserLanguage = () => {
 
   let searchParamLanguageValue = "";
+  const RIGHT_SEARCH_PARAM_LENGTH = 8;
+
+  //получаем значение строки запроса
   const searchParam = window.location.search.toLowerCase();
 
-  if (searchParam.slice(0, 6) === "?lang=") {
+  //query string check
+  if (searchParam.length === RIGHT_SEARCH_PARAM_LENGTH && searchParam.slice(0, 6) === "?lang=") {
     searchParamLanguageValue = searchParam.slice(6, 8);
   }
 
+  //get the user's system language
   const userSystemLanguage = window.navigator
     ? (window.navigator.language
       || window.navigator.systemLanguage
@@ -34,8 +40,10 @@ const getUserLanguage = () => {
   }
 };
 
+//get content according to the user's language settings
 const mainContent = getUserLanguage();
 
+//set the values displayed by the tags
 const setCurrentElementValueHandler = (tegClass, value, method) => {
   const element = document.querySelector(`${tegClass}`);
   if (method === 'innerHTML') {
@@ -46,6 +54,7 @@ const setCurrentElementValueHandler = (tegClass, value, method) => {
   }
 };
 
+//an array that stores information about classes, methods, and the contents of various tags
 const contentArray = [
   {className: '.title', content: `Unlimited Access<br>to All Features`, method: 'innerHTML',},
   {className: '.offer__price1', content: `<strong>{{price}}</strong><br>per month`, method: 'innerHTML',},
@@ -54,7 +63,7 @@ const contentArray = [
   {className: '.content__text2', content: `Count mode`, method: 'textContent',},
   {className: '.content__text3', content: `Text recognition (OCR)`, method: 'textContent',},
   {className: '.offer__title1', content: `Monthly`, method: 'textContent',},
-  {className: '.offer__title2', content: `Annually`, method: '',},
+  {className: '.offer__title2', content: `Annually`, method: 'textContent',},
   {className: '.offer__status1', content: `3 DAYS FREE`, method: 'textContent',},
   {className: '.offer__status2', content: `MOST POPULAR`, method: 'textContent',},
   {className: '.offer__month1', content: `{{price}}/month`, method: 'textContent',},
@@ -67,24 +76,26 @@ const contentArray = [
   {className: '.offer__discount', content: `-83%`, method: 'textContent',},
 ];
 
+//fill out our HTML content
 contentArray.forEach(({className, content, method}) => {
   setCurrentElementValueHandler(className, content, method);
 });
 
 //set the font size depending on the length of the text
 const title = document.querySelector('.title');
-const maximumTitleLengthBeforeHyphenation = 35;
-title.textContent.length >= maximumTitleLengthBeforeHyphenation
+const MAXIMUM_TITLE_LENGTH_BEFORE_HYPHENATION = 35;
+title.textContent.length >= MAXIMUM_TITLE_LENGTH_BEFORE_HYPHENATION
   ? title.classList.add("title__size")
   : title.classList.remove("title__size");
 
-//witch active offers block pn click event
+//get elements that change when the active element changes in the block "offers"
 const offer__item1 = document.querySelector('.offer__item1');
 const offer__item2 = document.querySelector('.offer__item2');
 const sending__link = document.querySelector('.sending__link');
 const offer__rectangle1 = document.querySelector('.offer__rectangle1');
 const offer__rectangle2 = document.querySelector('.offer__rectangle2');
 
+//switch the active sentence in the block "offers"
 const switchActiveOfferItem = (event) => {
   const elementClass = event.currentTarget.className
 

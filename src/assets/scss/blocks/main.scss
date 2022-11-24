@@ -2,14 +2,6 @@
   margin-top: 18.5vh;
   flex-grow: 1;
 
-  @media (max-height: 750px) {
-    margin-top: 12.5vh;
-  }
-
-  @media (max-height: 690px) {
-    margin-top: 7vh;
-  }
-
   .container {
     height: 100%;
     display: flex;
@@ -71,5 +63,13 @@
         }
       }
     }
+  }
+
+  @media (max-height: 750px) {
+    margin-top: 12.5vh;
+  }
+
+  @media (max-height: 690px) {
+    margin-top: 7vh;
   }
 }
