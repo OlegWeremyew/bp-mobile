@@ -3,6 +3,11 @@
     "version": "1.0.0",
     "description": "bd-mobile test task",
     "author": "Oleg Veremyev",
+    "homepage": "https://OlegWeremyew.github.io/bp-mobile",
+    "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+    },
     "devDependencies": {
         "@babel/core": "^7.16.0",
         "@babel/preset-env": "^7.16.4",
@@ -25,7 +30,8 @@
         "panini": "^1.7.2",
         "webpack": "^5.64.3",
         "webpack-stream": "^7.0.0",
-        "sass": "^1.43.4"
+        "sass": "^1.43.4",
+        "gh-pages": "^3.2.3"
     },
     "browserslist": [
         "last 1 version",
