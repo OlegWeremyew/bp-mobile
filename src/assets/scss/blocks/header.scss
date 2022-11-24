@@ -16,7 +16,7 @@
     transition: all 0.1s linear;
     font-family: 'SF Pro Display', sans-serif;
 
-    &:hover{
+    &:hover {
       text-decoration: underline;
       transition: all 0.1s linear;
     }
@@ -41,5 +41,13 @@
       color: $white;
       transition: color 0.2s linear;
     }
+
+    @media (min-height: 850px) {
+      font-size: 17px;
+    }
+  }
+
+  @media (max-height: 680px) {
+    margin-top: 20px;
   }
 }

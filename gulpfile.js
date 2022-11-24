@@ -2,6 +2,7 @@
 
 const {src, dest} = require("gulp");
 const gulp = require("gulp");
+const ghPages = require('gulp-gh-pages');
 const autoprefixer = require("gulp-autoprefixer");
 const cssbeautify = require("gulp-cssbeautify");
 const removeComments = require('gulp-strip-css-comments');
@@ -37,7 +38,7 @@ const path = {
     css: srcPath + "assets/scss/*.scss",
     images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml}",
     fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
-    localizations: srcPath + "assets/localizations/**/*.{json}",
+    localizations: srcPath + "assets/localizations/**/*.{json, js}",
   },
   watch: {
     html: srcPath + "**/*.html",
@@ -45,7 +46,7 @@ const path = {
     css: srcPath + "assets/scss/**/*.scss",
     images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml}",
     fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
-    localizations: srcPath + "assets/localizations/**/*.{json}",
+    localizations: srcPath + "assets/localizations/**/*.{json, js}",
   },
   clean: "./" + distPath,
 }
@@ -226,6 +227,10 @@ function watchFiles() {
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts, localizations));
 const watch = gulp.parallel(build, watchFiles, serve);
 
+gulp.task('deploy', function () {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
 
 /* Exports Tasks */
 exports.html = html;

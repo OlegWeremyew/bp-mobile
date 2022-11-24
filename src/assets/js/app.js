@@ -7,7 +7,7 @@ const getUserLanguage = () => {
   let searchParamLanguageValue = "";
   const RIGHT_SEARCH_PARAM_LENGTH = 8;
 
-  //получаем значение строки запроса
+  //get the value of the query string
   const searchParam = window.location.search.toLowerCase();
 
   //query string check

@@ -11,28 +11,36 @@
     padding: 0 2vw;
     text-align: center;
 
-    .title {
-      margin: 0 auto;
-      font-size: 36px;
-      line-height: 42px;
-      font-family: 'SF Pro Display', sans-serif;
-
-      color: $white;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .title__size {
-      font-size: 28px;
-    }
-
     .content {
       display: flex;
       flex-direction: column;
       align-items: center;
       font-family: 'SF Pro Display', sans-serif;
 
+      .title {
+        margin: 3px auto 0;
+        font-size: 36px;
+        line-height: 42px;
+        font-family: 'SF Pro Display', sans-serif;
+
+        color: $white;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+        @media (max-width: 375px) {
+          font-size: 32px;
+        }
+      }
+
+      .title__size {
+        font-size: 28px;
+
+        @media (max-width: 375px) {
+          font-size: 25px;
+        }
+      }
+
       .content__intro {
-        margin-top: 5vh;
+        margin-top: 4.4vh;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -59,6 +67,16 @@
             text-shadow: 0 0 4px rgba(0, 0, 0, 0.684495);
             font-size: 17px;
             line-height: 17px;
+
+            @media (min-height: 850px) {
+              font-size: 23px;
+              line-height: 23px;
+            }
+
+            @media (max-width: 375px) {
+              font-size: 14px;
+              line-height: 14px;
+            }
           }
         }
       }

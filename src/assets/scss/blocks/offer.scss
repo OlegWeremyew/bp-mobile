@@ -77,6 +77,57 @@
       font-size: 13.2px;
       line-height: 15px;
     }
+
+    @media (max-width: 375px) {
+      padding: 15px 0 10px;
+      height: 142px;
+      width: 121px;
+
+      .offer__title1,
+      .offer__title2 {
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      .offer__price1,
+      .offer__price2 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 13px;
+        font-family: 'SF Pro Display', sans-serif;
+
+        strong {
+          font-size: 19px;
+          line-height: 19px;
+          font-weight: 700;
+        }
+      }
+
+      .offer__rectangle1,
+      .offer__rectangle2, {
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+        background-color: $borderPrice;
+        height: 18px;
+        width: 105%;
+        font-family: 'SF Pro Display', sans-serif;
+        font-weight: 700;
+      }
+
+      .active__rectangle {
+        font-size: 13.6px;
+        line-height: 15px;
+        height: 20px;
+      }
+
+      .offer__month1,
+      .offer__month2 {
+        font-size: 12px;
+        line-height: 13px;
+      }
+    }
   }
 
   .offer__item2 {
@@ -98,6 +149,15 @@
       background-color: $red;
       color: $white;
       font-size: 12px;
+
+      @media (max-width: 375px) {
+        top: 0.25px;
+        right: 5px;
+
+        width: 26px;
+        height: 26px;
+        font-size: 10px;
+      }
     }
   }
 
@@ -119,15 +179,37 @@
 
     .offer__discount {
       top: -0.25px;
-      right: 6px;
-      width: 33.5px;
-      height: 33.5px;
+      right: 7px;
+      width: 33px;
+      height: 33px;
       font-size: 13px;
+
+      @media (max-width: 375px) {
+        top: -0.25px;
+        right: 3px;
+        width: 31px;
+        height: 31px;
+        font-size: 11.5px;
+      }
     }
 
     &:hover {
       transition: opacity 0.05s linear;
       opacity: 0.8;
     }
+
+    @media (max-width: 375px) {
+      height: 163px;
+      width: 137px;
+    }
+  }
+
+  @media (max-height: 680px) {
+    margin-top: 15px;
+  }
+
+  @media (max-width: 375px) {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }

@@ -20,5 +20,9 @@
     &:hover {
       color: $white;
     }
+
+    @media (min-height: 850px) {
+      font-size: 14px;
+    }
   }
 }

@@ -4,10 +4,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
-  font-family: 'SFProDisplay', sans-serif;
 
-  .sending__link{
+  .sending__link {
     text-decoration: none;
+    font-size: 17px;
 
     .sending__btn {
       display: flex;
@@ -18,6 +18,7 @@
       border-radius: 30px;
       color: $white;
       border: none;
+      font-family: 'SFProDisplay', sans-serif;
 
       background: linear-gradient(
                       270deg,
@@ -31,6 +32,14 @@
         opacity: 0.9;
         transition: opacity 0.2s linear;
       }
+
+      @media (max-width: 375px) {
+        width: 250px;
+      }
+    }
+
+    @media (max-width: 375px) {
+      font-size: 15px;
     }
   }
 
@@ -47,5 +56,10 @@
 
     mix-blend-mode: normal;
     opacity: 0.5;
+
+    @media (max-width: 375px) {
+      font-size: 10px;
+      line-height: 12px;
+    }
   }
 }
