@@ -68,20 +68,17 @@
             font-size: 17px;
             line-height: 17px;
 
-            @media (min-height: 850px) {
-              font-size: 23px;
-              line-height: 23px;
-            }
-
             @media (max-width: 375px) {
               font-size: 14px;
               line-height: 14px;
             }
-          }
-        }
-      }
-    }
-  }
+          } /* content__text1, content__text2, content__text3 */
+
+        } /* content__item */
+      } /* content__intro */
+
+    } /* content */
+  } /* container */
 
   @media (max-height: 750px) {
     margin-top: 12.5vh;

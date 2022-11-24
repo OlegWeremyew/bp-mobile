@@ -20,9 +20,5 @@
     &:hover {
       color: $white;
     }
-
-    @media (min-height: 850px) {
-      font-size: 14px;
-    }
-  }
-}
+  } /* footer__link--term, footer__link--privacy */
+} /* footer */

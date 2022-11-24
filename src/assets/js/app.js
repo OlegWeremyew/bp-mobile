@@ -118,3 +118,7 @@ const switchActiveOfferItem = (event) => {
 
 offer__item1.addEventListener('click', switchActiveOfferItem);
 offer__item2.addEventListener('click', switchActiveOfferItem);
+
+if(document.documentElement.clientWidth > 2075) {
+
+}

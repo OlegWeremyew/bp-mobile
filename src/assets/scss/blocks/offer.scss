@@ -14,7 +14,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 162px;
+    min-height: 162px;
     width: 131px;
     opacity: 0.35;
     cursor: pointer;
@@ -29,6 +29,11 @@
     .offer__title2 {
       font-size: 18.7px;
       line-height: 22px;
+      margin-top: 2px;
+    }
+
+    .offer__title2 {
+      margin-top: 6px;
     }
 
     .offer__price1,
@@ -46,16 +51,19 @@
       }
     }
 
+    /* offer__price1, offer__price2 */
+
     .offer__rectangle1,
     .offer__rectangle2, {
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 14px;
-      line-height: 16px;
+      line-height: 14px;
       text-transform: uppercase;
       background-color: $borderPrice;
-      height: 20px;
+      padding: 2px 4px;
+      min-height: 20px;
       width: 105%;
       font-family: 'SF Pro Display', sans-serif;
       font-weight: 700;
@@ -66,10 +74,13 @@
       }
     }
 
+    /* offer__rectangle1, offer__rectangle2 */
+
     .active__rectangle {
       font-size: 15.4px;
       line-height: 18px;
-      height: 22px;
+      min-height: 22px;
+      padding: 2px 8px;
     }
 
     .offer__month1,
@@ -110,7 +121,7 @@
         line-height: 14px;
         text-transform: uppercase;
         background-color: $borderPrice;
-        height: 18px;
+        min-height: 18px;
         width: 105%;
         font-family: 'SF Pro Display', sans-serif;
         font-weight: 700;
@@ -128,7 +139,11 @@
         line-height: 13px;
       }
     }
+    /* @media (max-width: 375px) */
+
   }
+
+  /* offer__item1, offer__item2 */
 
   .offer__item2 {
     position: relative;
@@ -161,6 +176,8 @@
     }
   }
 
+  /* offer__item2 */
+
   .offer__item1 {
     background: url('../images/combined-shape.png') no-repeat;
     background-size: contain;
@@ -172,7 +189,7 @@
   }
 
   .active {
-    height: 178px;
+    min-height: 178px;
     width: 152px;
     opacity: 1;
     transition: opacity 0.05s linear;
@@ -180,6 +197,7 @@
     .offer__discount {
       top: -0.25px;
       right: 7px;
+
       width: 33px;
       height: 33px;
       font-size: 13px;
@@ -193,16 +211,22 @@
       }
     }
 
+    /* offer__discount */
+
     &:hover {
       transition: opacity 0.05s linear;
       opacity: 0.8;
     }
+
+    /* active:hover */
 
     @media (max-width: 375px) {
       height: 163px;
       width: 137px;
     }
   }
+
+  /* active */
 
   @media (max-height: 680px) {
     margin-top: 15px;
@@ -213,3 +237,5 @@
     margin-right: 15px;
   }
 }
+
+/* offers */
