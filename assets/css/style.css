@@ -769,7 +769,7 @@ a:focus {
   .offers .offer__item2 .active__rectangle {
         font-size: 13.6px;
         line-height: 15px;
-        height: 20px;
+        min-height: 20px;
     }
 
     .offers .offer__item1 .offer__month1,
@@ -778,6 +778,13 @@ a:focus {
   .offers .offer__item2 .offer__month2 {
         font-size: 12px;
         line-height: 13px;
+    }
+}
+
+@media (max-width: 375px) {
+    .offers .offer__item1,
+  .offers .offer__item2 {
+        padding-bottom: 30px;
     }
 }
 
@@ -807,7 +814,7 @@ a:focus {
 @media (max-width: 375px) {
     .offers .offer__item2 .offer__discount {
         top: 0.25px;
-        right: 5px;
+        right: 1.5px;
         width: 26px;
         height: 26px;
         font-size: 10px;
@@ -844,7 +851,7 @@ a:focus {
 @media (max-width: 375px) {
     .offers .active .offer__discount {
         top: -0.25px;
-        right: 3px;
+        right: 0;
         width: 31px;
         height: 31px;
         font-size: 11.5px;
@@ -858,8 +865,9 @@ a:focus {
 
 @media (max-width: 375px) {
     .offers .active {
-        height: 163px;
+        min-height: 163px;
         width: 137px;
+        padding-bottom: 10px;
     }
 }
 
