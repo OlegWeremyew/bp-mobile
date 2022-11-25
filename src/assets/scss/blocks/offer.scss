@@ -130,7 +130,7 @@
       .active__rectangle {
         font-size: 13.6px;
         line-height: 15px;
-        height: 20px;
+        min-height: 20px;
       }
 
       .offer__month1,
@@ -141,6 +141,9 @@
     }
     /* @media (max-width: 375px) */
 
+    @media (max-width: 375px) {
+      padding-bottom: 25px;
+    }
   }
 
   /* offer__item1, offer__item2 */
@@ -166,12 +169,12 @@
       font-size: 12px;
 
       @media (max-width: 375px) {
-        top: 0.25px;
-        right: 5px;
+        top: 1.25px;
+        right: 1.5px;
 
         width: 26px;
         height: 26px;
-        font-size: 10px;
+        font-size: 9px;
       }
     }
   }
@@ -221,8 +224,9 @@
     /* active:hover */
 
     @media (max-width: 375px) {
-      height: 163px;
+      min-height: 163px;
       width: 137px;
+      padding-bottom: 10px;
     }
   }
 
@@ -233,8 +237,8 @@
   }
 
   @media (max-width: 375px) {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 7px;
+    margin-right: 7px;
   }
 }
 
