@@ -784,7 +784,7 @@ a:focus {
 @media (max-width: 375px) {
     .offers .offer__item1,
   .offers .offer__item2 {
-        padding-bottom: 30px;
+        padding-bottom: 25px;
     }
 }
 
@@ -813,11 +813,11 @@ a:focus {
 
 @media (max-width: 375px) {
     .offers .offer__item2 .offer__discount {
-        top: 0.25px;
+        top: 1.25px;
         right: 1.5px;
         width: 26px;
         height: 26px;
-        font-size: 10px;
+        font-size: 9px;
     }
 }
 
@@ -851,7 +851,7 @@ a:focus {
 @media (max-width: 375px) {
     .offers .active .offer__discount {
         top: -0.25px;
-        right: 0;
+        right: 3px;
         width: 31px;
         height: 31px;
         font-size: 11.5px;
@@ -879,8 +879,8 @@ a:focus {
 
 @media (max-width: 375px) {
     .offers {
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 7px;
+        margin-right: 7px;
     }
 }
 
