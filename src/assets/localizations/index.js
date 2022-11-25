@@ -1,10 +1,10 @@
-const en = require('../localizations/en.json');
-const es = require('../localizations/es.json');
-const fr = require('../localizations/fr.json');
-const ja = require('../localizations/ja.json');
-const nl = require('../localizations/nl.json');
-const ru = require('../localizations/ru.json');
-const zh = require('../localizations/zh.json');
+import * as en from '../localizations/en.json';
+import * as es from '../localizations/es.json';
+import * as fr from '../localizations/fr.json';
+import * as ja from '../localizations/ja.json';
+import * as nl from '../localizations/nl.json';
+import * as ru from '../localizations/ru.json';
+import * as zh from '../localizations/zh.json';
 
 export {
   en,

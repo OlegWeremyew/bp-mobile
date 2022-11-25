@@ -1,5 +1,4 @@
-const languages = require('../localizations/index');
-const {es, fr, ja, nl, ru, zh, en} = languages;
+import {es, fr, ja, nl, ru, zh, en} from '../localizations/index';
 
 //a function that determines the language of the user's page
 const getUserLanguage = () => {
@@ -48,6 +47,7 @@ const setCurrentElementValueHandler = (tegClass, value, method) => {
   const element = document.querySelector(`${tegClass}`);
   if (method === 'innerHTML') {
     element.innerHTML = mainContent[value];
+    return;
   }
   if (method === 'textContent') {
     element.textContent = mainContent[value];
@@ -97,7 +97,7 @@ const offer__rectangle2 = document.querySelector('.offer__rectangle2');
 
 //switch the active sentence in the block "offers"
 const switchActiveOfferItem = (event) => {
-  const elementClass = event.currentTarget.className
+  const elementClass = event.currentTarget.className;
 
   if (elementClass.includes('offer__item1')) {
     offer__item1.classList.add('active');
@@ -116,9 +116,6 @@ const switchActiveOfferItem = (event) => {
   }
 };
 
+//
 offer__item1.addEventListener('click', switchActiveOfferItem);
 offer__item2.addEventListener('click', switchActiveOfferItem);
-
-if(document.documentElement.clientWidth > 2075) {
-
-}

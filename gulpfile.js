@@ -9,12 +9,10 @@ const removeComments = require('gulp-strip-css-comments');
 const rename = require("gulp-rename");
 const sass = require("gulp-sass")(require("sass"));
 const cssnano = require("gulp-cssnano");
-const uglify = require("gulp-uglify");
 const plumber = require("gulp-plumber");
 const panini = require("panini");
 const del = require("del");
 const notify = require("gulp-notify");
-const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const browserSync = require("browser-sync").create();
 
