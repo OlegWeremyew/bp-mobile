@@ -410,6 +410,20 @@ a:focus {
     margin: 0 auto;
 }
 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .page {
+        background: url("../images/background-full/4@2x.png") no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+    .page {
+        background: url("../images/background-full/4@3x.png") no-repeat;
+        background-size: cover;
+    }
+}
+
 .header {
     height: 24px;
     display: -ms-flexbox;
