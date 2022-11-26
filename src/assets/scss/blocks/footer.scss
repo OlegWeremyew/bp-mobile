@@ -7,8 +7,7 @@
   padding: 0 30px;
   font-family: 'Roboto', sans-serif;
 
-  .footer__link--term,
-  .footer__link--privacy {
+  &__link {
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
@@ -20,5 +19,5 @@
     &:hover {
       color: $white;
     }
-  } /* footer__link--term, footer__link--privacy */
-} /* footer */
+  }
+}

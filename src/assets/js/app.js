@@ -71,8 +71,8 @@ const contentArray = [
   {className: '.sending__btn', content: `Continue`, method: 'textContent',},
   {className: '.sending__text', content: `Auto-renewable. Cancel anytime.`, method: 'textContent',},
   {className: '.header__link', content: `Restore`, method: 'textContent',},
-  {className: '.footer__link--term', content: `Terms of Use`, method: 'textContent',},
-  {className: '.footer__link--privacy', content: `Privacy Policy`, method: 'textContent',},
+  {className: '.footer__term', content: `Terms of Use`, method: 'textContent',},
+  {className: '.footer__privacy', content: `Privacy Policy`, method: 'textContent',},
   {className: '.offer__discount', content: `-83%`, method: 'textContent',},
 ];
 
