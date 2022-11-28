@@ -42,44 +42,18 @@ const getUserLanguage = () => {
 //get content according to the user's language settings
 const mainContent = getUserLanguage();
 
-//set the values displayed by the tags
-const setCurrentElementValueHandler = (tegClass, value, method) => {
-  const element = document.querySelector(`${tegClass}`);
-  if (method === 'innerHTML') {
-    element.innerHTML = mainContent[value];
-    return;
-  }
-  if (method === 'textContent') {
-    element.textContent = mainContent[value];
-  }
-};
 
-//an array that stores information about classes, methods, and the contents of various tags
-const contentArray = [
-  {className: '.title', content: `Unlimited Access<br>to All Features`, method: 'innerHTML',},
-  {className: '.offer__price1', content: `<strong>{{price}}</strong><br>per month`, method: 'innerHTML',},
-  {className: '.offer__price2', content: `<strong>{{price}}</strong><br>per year`, method: 'innerHTML',},
-  {className: '.content__text1', content: `Unlimited documents`, method: 'textContent',},
-  {className: '.content__text2', content: `Count mode`, method: 'textContent',},
-  {className: '.content__text3', content: `Text recognition (OCR)`, method: 'textContent',},
-  {className: '.offer__title1', content: `Monthly`, method: 'textContent',},
-  {className: '.offer__title2', content: `Annually`, method: 'textContent',},
-  {className: '.offer__status1', content: `3 DAYS FREE`, method: 'textContent',},
-  {className: '.offer__status2', content: `MOST POPULAR`, method: 'textContent',},
-  {className: '.offer__month1', content: `{{price}}/month`, method: 'textContent',},
-  {className: '.offer__month2', content: `{{price}}/month`, method: 'textContent',},
-  {className: '.sending__btn', content: `Continue`, method: 'textContent',},
-  {className: '.sending__text', content: `Auto-renewable. Cancel anytime.`, method: 'textContent',},
-  {className: '.header__link', content: `Restore`, method: 'textContent',},
-  {className: '.footer__term', content: `Terms of Use`, method: 'textContent',},
-  {className: '.footer__privacy', content: `Privacy Policy`, method: 'textContent',},
-  {className: '.offer__discount', content: `-83%`, method: 'textContent',},
-];
 
-//fill out our HTML content
-contentArray.forEach(({className, content, method}) => {
-  setCurrentElementValueHandler(className, content, method);
-});
+//get all tags include data-attribute "data-content"
+const dataAttributes = document.querySelectorAll(`[data-content]`);
+
+//set the tag value depending on its data attribute value
+//use loop "for" instead of ".forEach()" array method because it is faster
+for (let i = 0; i < dataAttributes.length; i += 1) {
+  dataAttributes[i].innerHTML = mainContent[dataAttributes[i].dataset.content];
+}
+
+
 
 //set the font size depending on the length of the text
 const title = document.querySelector('.title');
@@ -116,6 +90,5 @@ const switchActiveOfferItem = (event) => {
   }
 };
 
-//
 offer__item1.addEventListener('click', switchActiveOfferItem);
 offer__item2.addEventListener('click', switchActiveOfferItem);

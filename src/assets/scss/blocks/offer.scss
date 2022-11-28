@@ -3,9 +3,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 28px 25px 10px;
+  margin: 28px auto 10px;
   color: $white;
   font-family: 'SF Pro Display', sans-serif;
+  width: 297px;
 
   .offer__item1,
   .offer__item2 {
@@ -27,13 +28,13 @@
 
     .offer__title1,
     .offer__title2 {
-      font-size: 18.7px;
-      line-height: 22px;
+      font-size: 17px;
+      line-height: 19.92px;
       margin-top: 2px;
     }
 
     .offer__title2 {
-      margin-top: 6px;
+      margin-top: 4px;
     }
 
     .offer__price1,
@@ -49,9 +50,7 @@
         line-height: 24px;
         font-weight: 700;
       }
-    }
-
-    /* offer__price1, offer__price2 */
+    } /* offer__price1, offer__price2 */
 
     .offer__rectangle1,
     .offer__rectangle2, {
@@ -72,9 +71,7 @@
       .offer__status2 {
         text-transform: uppercase;
       }
-    }
-
-    /* offer__rectangle1, offer__rectangle2 */
+    } /* offer__rectangle1, offer__rectangle2 */
 
     .active__rectangle {
       font-size: 15.4px;
@@ -122,15 +119,24 @@
         text-transform: uppercase;
         background-color: $borderPrice;
         min-height: 18px;
-        width: 105%;
+        width: 137px;
         font-family: 'SF Pro Display', sans-serif;
         font-weight: 700;
+
+        @media (max-width: 375px) {
+          width: 127px;
+        }
       }
 
       .active__rectangle {
         font-size: 13.6px;
         line-height: 15px;
         min-height: 20px;
+        width: 151px;
+
+        @media (max-width: 375px) {
+          width: 139px;
+        }
       }
 
       .offer__month1,
@@ -138,15 +144,12 @@
         font-size: 12px;
         line-height: 13px;
       }
-    }
-    /* @media (max-width: 375px) */
+    } /* @media (max-width: 375px) */
 
     @media (max-width: 375px) {
       padding-bottom: 25px;
     }
-  }
-
-  /* offer__item1, offer__item2 */
+  } /* offer__item1, offer__item2 */
 
   .offer__item2 {
     position: relative;
@@ -154,7 +157,7 @@
 
     .offer__discount {
       position: absolute;
-      right: 0;
+      right: 1px;
       top: 0;
 
       display: flex;
@@ -166,80 +169,78 @@
       border-radius: 50%;
       background-color: $red;
       color: $white;
-      font-size: 12px;
+      font-size: 10px;
+      line-height: 12px;
 
       @media (max-width: 375px) {
-        top: 1.25px;
-        right: 1.5px;
+        top: -0.7px;
+        right: 0;
 
-        width: 26px;
-        height: 26px;
+        width: 28px;
+        height: 28px;
         font-size: 9px;
       }
     }
-  }
-
-  /* offer__item2 */
+  } /* offer__item2 */
 
   .offer__item1 {
-    background: url('../images/combined-shape.png') no-repeat;
+    background: url('../images/combined-shape.webp') no-repeat;
     background-size: contain;
   }
 
   .offer__item2 {
-    background: url('../images/combined-shape-cut.png') no-repeat;
+    background: url('../images/combined-shape-cut.webp') no-repeat;
     background-size: contain;
   }
 
   .active {
     min-height: 178px;
-    width: 152px;
+    width: 144px;
     opacity: 1;
     transition: opacity 0.05s linear;
 
+    .offer__title1,
+    .offer__title2 {
+      font-size: 18.7px;
+      line-height: 22px;
+      margin-top: 2px;
+    }
+
     .offer__discount {
       top: -0.25px;
-      right: 7px;
+      right: 1px;
 
       width: 33px;
       height: 33px;
-      font-size: 13px;
+      font-size: 12px;
+      line-height: 14px;
 
       @media (max-width: 375px) {
         top: -0.25px;
-        right: 3px;
+        right: 0;
         width: 31px;
         height: 31px;
         font-size: 11.5px;
       }
-    }
-
-    /* offer__discount */
+    } /* offer__discount */
 
     &:hover {
       transition: opacity 0.05s linear;
       opacity: 0.8;
-    }
-
-    /* active:hover */
+    } /* active:hover */
 
     @media (max-width: 375px) {
       min-height: 163px;
-      width: 137px;
+      width: 133px;
       padding-bottom: 10px;
     }
-  }
-
-  /* active */
+  } /* active */
 
   @media (max-height: 680px) {
     margin-top: 15px;
   }
 
   @media (max-width: 375px) {
-    margin-left: 7px;
-    margin-right: 7px;
+    width: 277px;
   }
-}
-
-/* offers */
+}  /* offers */
